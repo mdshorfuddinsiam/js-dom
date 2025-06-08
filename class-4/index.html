@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Dom (querySelector & querySelectorAll)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            color: lightgray;
+            font-size: 48px;
+        }
+        li {
+            color: blue;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .love{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>querySelector vs querySelectorAll</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora aspernatur impedit cupiditate, error aliquid repellendus eius. Ipsa eius officia placeat quibusdam, esse vel fugiat libero, autem sequi saepe labore quas vitae, excepturi iusto illum laudantium minima magni delectus deserunt. Corporis excepturi eius necessitatibus beatae! Dignissimos quo enim cum deserunt reprehenderit.</p>
+    </header>
+
+    <main>
+        <section>
+            <h1>Programming Languages</h1>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>Php</li>
+            </ul>
+        </section>
+        <section id="others-container">
+            <h1>Others Languages</h1>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="student-title">Student Lists</h1>
+            <ul class="love-lists">
+                <li class="love">Siam</li>
+                <li class="love">Pushpita</li>
+                <li class="love">Shorfuddin</li>
+                <li>Arman</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom-js.js"></script>
+    <script>
+        console.log('Inside script tag inside html file');
+
+        console.log('-----------');
+
+        // const getFirstItem = document.querySelector('h1');
+        // const getFirstItem = document.querySelector('#others-container li');
+        const getFirstItem = document.querySelector('.love');
+        console.log(getFirstItem);
+
+        console.log('-----------');
+
+        // const getLists = document.querySelectorAll('h1');
+        // const getLists = document.querySelectorAll('.love');
+        // const getLists = document.querySelectorAll('.love-lists');
+        // const getLists = document.querySelectorAll('.love-lists li');
+        const getLists = document.querySelectorAll('#others-container li');
+        console.log(getLists);
+        for(list of getLists){
+            // console.log(list);
+            // console.log(list.innerText);
+            console.log(list.textContent);
+        }
+        
+    </script>
+</body>
+</html>
