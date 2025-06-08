@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Style (getAttribute, setAttribute, innerText, innerHTML)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            color: lightgray;
+            font-size: 48px;
+        }
+        li {
+            color: blue;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .love{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="header-section" >
+        <h1 id="header-title" class="title1 title2">Dynamic Style (getAttribute, setAttribute, innerText, innerHTML)</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora aspernatur impedit cupiditate, error aliquid repellendus eius. Ipsa eius officia placeat quibusdam, esse vel fugiat libero, autem sequi saepe labore quas vitae, excepturi iusto illum laudantium minima magni delectus deserunt. Corporis excepturi eius necessitatibus beatae! Dignissimos quo enim cum deserunt reprehenderit.</p>
+    </header>
+
+    <main>
+        <section class="language-container">
+            <h1>Programming Languages</h1>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>Php</li>
+            </ul>
+        </section>
+        <section id="others-container">
+            <h1>Others Languages</h1>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="student-title">Student Lists</h1>
+            <ul class="love-lists">
+                <li class="love">Siam</li>
+                <li class="love">Pushpita</li>
+                <li class="love">Shorfuddin</li>
+                <li>Arman</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom-js.js"></script>
+    <script>
+        console.log('Inside script tag inside html file');
+
+        console.log('-----------');
+
+        let getTitle = document.getElementById('header-title');
+        // console.log(getTitle);
+        // console.log(getTitle.style);
+        getTitle.style.color = 'red';
+        getTitle.style.textAlign = 'center';
+        getTitle.style.backgroundColor = 'yellow';
+        getTitle.style.padding = '10px';
+        getTitle.style.border = '5px solid blue';
+        console.log(getTitle);
+        console.log(getTitle.getAttribute('id'));
+        console.log(getTitle.getAttribute('class'));
+        // getTitle.setAttribute('title', 'Tooltip set for title');
+        // getTitle.setAttribute('class', 'main-title');
+        // console.log(getTitle.getAttribute('class'));
+        // console.log(getTitle.getAttribute('title'));
+        console.log(getTitle.classList);
+        console.log(getTitle.classList.length);
+        getTitle.classList.add('title3');
+        console.log(getTitle.classList);
+
+        console.log('-----------');
+
+        console.log(document.getElementsByClassName('language-container'));
+        console.log(document.getElementsByClassName('language-container')[0]);
+        languageSection = document.getElementsByClassName('language-container')[0];
+        console.log(languageSection);
+        languageSection.innerHTML = `<h1>Updated Section</h1><p style="font-weight:bold">dddd dddd dddd dddd dddd</p>`;
+        console.log(languageSection);
+        console.log(languageSection.innerHTML);
+        console.log(languageSection.innerText);
+    </script>
+</body>
+</html>
