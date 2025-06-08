@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Dom (get-elements-by-tag-name)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            color: lightgray;
+            font-size: 48px;
+        }
+        li {
+            color: blue;
+            font-weight: bold;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Get Element By Tag Name</h1>
+    </header>
+
+    <main>
+        <h1>Programming Languages</h1>
+        <ul>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Javascript</li>
+            <li>Php</li>
+        </ul>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+    </main>
+    <script src="js/dom-js.js"></script>
+    <script>
+        console.log('Inside script tag inside html file');
+        
+        // javascript a object er moddhe function thakte pare. Example:
+        let student = {
+            id: 1111,
+            name: 'Siam',
+            age: function(age){
+                console.log('Age is', age)
+            }
+        }
+
+        // getelementsByTagName () method returns a live HTMLCollection of elements with the given tag name.
+        // The HTMLCollection is a collection of elements that can be accessed by their index or by their tag name.
+
+        let h1Collection = document.getElementsByTagName('h1');
+        console.log(h1Collection);
+        for(let h1 of h1Collection){
+            console.log(h1);
+        }
+
+        console.log('--------------')
+        
+        let liCollection = document.getElementsByTagName('li');
+        for(let li of liCollection){
+            // console.log(li);
+            console.log(li.innerText);
+        }
+
+    </script>
+</body>
+</html>
