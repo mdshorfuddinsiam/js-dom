@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (first class)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            color: lightgray;
+            font-size: 48px;
+        }
+        li {
+            color: blue;
+            font-weight: bold;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome To my Dom</h1>
+    </header>
+
+    <main>
+        <h1>Programming Languages</h1>
+        <ul>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Javascript</li>
+        </ul>
+    </main>
+    <script src="js/dom-js.js"></script>
+    <script>
+        console.log('Inside script tag inside html file');
+        console.log(document);
+        console.log(document.body);
+        console.log(document.head);
+        console.log(document.documentElement);
+        console.log(document.title);
+        console.log(document.URL);
+        
+
+        // console.log(document.querySelector('h1'));
+        // console.log(document.querySelector('li'));
+        // console.log(document.querySelectorAll('li'));
+        // console.log(document.querySelectorAll('li')[0]);
+        // console.log(document.querySelectorAll('li')[1]);
+        // console.log(document.querySelectorAll('ul'));
+        // console.log(document.querySelectorAll('ul li'));
+    </script>
+</body>
+</html>
