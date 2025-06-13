@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+
+    <h1>Add comment Using Add Event Listener</h1>
+    <section id="comment-container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita eligendi doloribus dolor consequatur perferendis eum modi accusantium suscipit cum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita eligendi doloribus dolor consequatur perferendis eum modi accusantium suscipit cum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit expedita eligendi doloribus dolor consequatur perferendis eum modi accusantium suscipit cum.</p>
+    </section>
+
+        <textarea id="comment-field" rows="10" cols="60"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            let commentField = document.getElementById('comment-field');
+            let commentText = commentField.value;
+
+            let commmentContainer = document.getElementById('comment-container');
+            let p = document.createElement('p');
+            p.innerText = commentText;
+            commmentContainer.appendChild(p);
+
+            commentField.value = '';
+        });
+    </script>
+    
+</body>
+</html>
