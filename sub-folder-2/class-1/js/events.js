@@ -1,1 +1,1 @@
-console.log('Event js file!!')
+console.log('Event js file!!');
