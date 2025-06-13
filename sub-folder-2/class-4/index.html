@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Dom Event Handler</title>
+</head>
+<body>
+
+    <h1>Final Dom Event Handler</h1>
+    
+    <h3 id="display-text">Default Text</h3>
+
+    <button onclick="textHandler()">Handle By Onclick Function</button>
+    <button id="handle-button">Handle By addEventListener</button>
+
+    <br>
+    <br>
+
+    <h3 id="input-text-display">Default Input Text</h3>
+    <input type="text" id="input-field">
+    <button id="submit-button">Submit</button>
+
+    <script src="js/event-summary.js"></script>
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function(){
+            inputField = document.getElementById('input-field');
+            updateArea = document.getElementById('input-text-display');
+
+            updateArea.innerText = inputField.value;
+            inputField.value = '';
+        });
+    </script>
+
+</body>
+</html>
