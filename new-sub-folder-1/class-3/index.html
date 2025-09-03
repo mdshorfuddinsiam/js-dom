@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <style>
+      li {
+        color: red;
+      }
+	  #countries-title {
+		color: black;
+	  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+        natus! Quibusdam id consequatur eum. Soluta sunt dicta perspiciatis
+        repudiandae adipisci? Veritatis earum assumenda sapiente? Illum dicta
+        eum nam id perspiciatis?
+      </p>
+    </header>
+    <main>
+		<section>
+			<h1>First Section</h1>
+			<ul>
+				<li>Item - 1</li>
+				<li>Item - 2</li>
+				<li>Item - 3</li>
+			</ul>
+		</section>
+		<section>
+			<h1 id="countries-title">Country Section</h1>
+			<ul>
+				<li class="asian-countries">Bangladesh</li>
+				<li class="asian-countries">India</li>
+				<li class="asian-countries">Pakistan</li>
+			</ul>
+		</section>
+		<section>
+			<h1 id="fruits-title">Fruits Section</h1>
+			<ul>
+				<li>Apple</li>
+				<li>Banana</li>
+				<li>Jackfruit</li>
+			</ul>
+		</section>
+	</main>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript"></script>
+	<script>
+		let test_title = document.getElementById('fruits');
+		console.log(test_title);
+		let fruitsTitle = document.getElementById('fruits-title');
+		// console.log(fruitsTitle);
+		// console.log(fruitsTitle.innerText);
+		let countriesTitle = document.getElementById('countries-title');
+		// console.log(countriesTitle);
+		// console.log(document.getElementById('countries-title'));
+		let titleChange = countriesTitle.innerHTML = 'Updated Title';
+		// console.log(titleChange);
+
+		let test_countries = document.getElementsByClassName('countries');
+		console.log(test_countries);
+		let countries = document.getElementsByClassName('asian-countries');
+		console.log(countries);
+		for(country of countries){
+			console.log(country);
+			console.log(country.innerText);
+		}
+	</script>
+  </body>
+</html>

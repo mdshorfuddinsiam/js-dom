@@ -1,0 +1,9 @@
+* DOM = javascript (document/html) k ekta (model) er moto banaya rakhe ... jeta hocche ekta (object)
+* DOM = (Html) & (Javascript) er majhe thake (DOM) ... j kina 2 tar moddhe connection ghotay ... (html) ja kisu thake shegula k (javascript) a niye eshe ekta (object) banaya raikha dey
+* querySelector vs querySelectorAll = (querySelector) only first (element/item/child) k niye ashe ... onnodik a (querySelectorAll) shokol (element/item/child) gulo k niye ashe
+* NodeList vs HTMLCollection ?
+* innerHtml vs innerText ?
+* search : dom node
+* node = (Html) er prottekta element e ekekta (node)
+# console.log(document); eta html/javascript a likhle ekrokom output .... abr (console) a jeye (document) likle arekrokom output ashe
+@ document.getElementsByTagName('h1'); = HTMLCollection(2) [h1, h1]

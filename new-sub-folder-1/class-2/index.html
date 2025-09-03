@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tour of DOM</title>
+	<link rel="stylesheet" href="style/style.css">
+	<style>
+		li{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Welcome to my DOM</h1>
+	</header>
+	<main>
+		<h1>First Section</h1>
+		<ul>
+			<li>Country List-1</li>
+			<li>Country List-2</li>
+			<li>Country List-3</li>
+		</ul>
+		<ul>
+			<li>Item - 1</li>
+			<li>Item - 2</li>
+			<li>Item - 3</li>
+		</ul>
+	</main>
+
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		// console.log('Script form HTML file');
+		// console.log(document);
+		// let student = {
+		// 	name: 'Siam',
+		// 	id: 251783037,
+		// 	total: function(total_students){
+		// 		console.log(total_students, ' Students in class!!');
+		// 	}
+		// }
+
+		let liCollection = document.getElementsByTagName('li');
+		for(li of liCollection){
+			console.log(li);
+		}
+
+		h1Collection = document.getElementsByTagName('h1');
+		for(h1 of h1Collection){
+			console.log(h1);
+			console.log(h1.innerText);
+		}
+	</script>
+</body>
+</html>
