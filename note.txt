@@ -7,3 +7,5 @@
 * node = (Html) er prottekta element e ekekta (node)
 # console.log(document); eta html/javascript a likhle ekrokom output .... abr (console) a jeye (document) likle arekrokom output ashe
 @ document.getElementsByTagName('h1'); = HTMLCollection(2) [h1, h1]
+# document.getElementById('fruits'); [id wrong] | (output) null
+# document.getElementsByClassName('countries'); [class wrong] | (output) HTMLCollection []

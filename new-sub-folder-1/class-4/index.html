@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelectorAll</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <style>
+      li {
+        color: red;
+      }
+	  #countries-title {
+		color: black;
+	  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+        natus! Quibusdam id consequatur eum. Soluta sunt dicta perspiciatis
+        repudiandae adipisci? Veritatis earum assumenda sapiente? Illum dicta
+        eum nam id perspiciatis?
+      </p>
+    </header>
+    <main>
+		<section>
+			<h1>First Section</h1>
+			<ul>
+				<li>Item - 1</li>
+				<li>Item - 2</li>
+				<li>Item - 3</li>
+			</ul>
+		</section>
+		<section class="country-container">
+			<h1 id="countries-title">Country Section</h1>
+			<ul>
+				<li class="asian-countries">Bangladesh</li>
+				<li class="asian-countries">India</li>
+				<li class="asian-countries">Pakistan</li>
+			</ul>
+		</section>
+		<section>
+			<h1 id="fruits-title">Fruits Section</h1>
+			<ul>
+				<li>Apple</li>
+				<li>Banana</li>
+				<li>Jackfruit</li>
+			</ul>
+		</section>
+	</main>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript"></script>
+	<script>
+		let country_title = document.querySelectorAll('container');
+		console.log(country_title);
+		let c_title = document.querySelectorAll('.country-container');
+		console.log(c_title);
+		let fruits_title = document.querySelectorAll('#fruits-title');
+		console.log(fruits_title);
+		let countryCollection = document.querySelectorAll('.country-container li');
+		console.log(countryCollection);
+		for(country of countryCollection){
+			console.log(country.innerText);
+		}
+	</script>
+  </body>
+</html>
