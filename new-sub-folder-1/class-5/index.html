@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom (style, attibute etc)</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <style>
+      li {
+        color: red;
+      }
+	  #countries-title {
+		color: black;
+	  }
+	  .asian-countries{
+		background-color: blue;
+	  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+        natus! Quibusdam id consequatur eum. Soluta sunt dicta perspiciatis
+        repudiandae adipisci? Veritatis earum assumenda sapiente? Illum dicta
+        eum nam id perspiciatis?
+      </p>
+    </header>
+    <main>
+		<section>
+			<h1>First Section</h1>
+			<ul>
+				<li>Item - 1</li>
+				<li>Item - 2</li>
+				<li>Item - 3</li>
+			</ul>
+		</section>
+		<section class="country-container">
+			<h1 id="countries-title">Country Section</h1>
+			<!-- Country Lists -->
+			<ul>
+				<li class="asian-countries">Bangladesh</li>
+				<li class="asian-countries">India</li>
+				<li class="asian-countries">Pakistan</li>
+			</ul>
+		</section>
+		<section>
+			<h1 id="fruits-title" class="some-class bg-color rendom-class">Fruits Section</h1>
+			<ul>
+				<li>Apple</li>
+				<li>Banana</li>
+				<li>Jackfruit</li>
+			</ul>
+		</section>
+	</main>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript"></script>
+	<script>
+		// let f_title = document.getElementById('fruits-title');
+		// console.log(f_title.style);
+		// console.log(f_title.style.color);
+		// f_title.style.color = 'red';
+		// console.log(f_title);
+		// f_title.style.backgroundColor = 'yellow';
+		// console.log(f_title);
+		// f_title.style.textAlign = 'center';
+		// console.log(f_title);
+		// console.log(f_title.getAttribute('class'))
+		// console.log(f_title.classList);
+		// f_title.classList.remove('bg-color');
+		// console.log(f_title.classList);
+		// f_title.classList.add('test-class');
+		// console.log(f_title.classList);
+		// console.log(f_title.getAttribute('class'))
+		// f_title.setAttribute('title', 'Tooltip set by Javascript!');
+
+		let container = document.getElementsByClassName('country-container');
+		console.log(container);
+		let container_0 = document.getElementsByClassName('country-container')[0];
+		console.log(container_0);
+		// let container_0_text = document.getElementsByClassName('country-container')[0].innerText;
+		let container_0_text = document.getElementsByClassName('country-container')[0].innerHTML;
+		console.log(container_0_text);
+		// let container_0_set_text = document.getElementsByClassName('country-container')[0].innerHTML = '<h1>Custom Title</h1>';
+		let container_0_set_text = document.getElementsByClassName('country-container')[0].innerText = '<h1>Custom Title</h1>';
+		console.log(container_0_set_text);
+	</script>
+  </body>
+</html>

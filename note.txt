@@ -9,3 +9,5 @@
 @ document.getElementsByTagName('h1'); = HTMLCollection(2) [h1, h1]
 # document.getElementById('fruits'); [id wrong] | (output) null
 # document.getElementsByClassName('countries'); [class wrong] | (output) HTMLCollection []
+# document.getElementsByClassName('country-container')[0].innerText = '<h1>Custom Title</h1>';  =  (output) tag shoho ashbe
+# document.getElementsByClassName('country-container')[0].innerHTML = '<h1>Custom Title</h1>';  =  (output) html a convert hoye ashbe
