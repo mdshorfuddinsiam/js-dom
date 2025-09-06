@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Event - addEventListener)</title>
+</head>
+<body>
+    
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-text">Default Text</h3>
+    <button onclick="handleOnClick();">Handle Event by onclick Function</button>
+    <button id="event-listener">Handle Event by addEventListener</button>
+
+    <!-- search -->
+    <p id="input-text">Default Text Input</p>
+    <input id="input-field" type="text">
+    <button id="update-btn">Update</button>
+
+    <script src="js/event.js"></script>
+    <script>
+        function handleOnClick(){
+            const handlerText = document.getElementById('handler-text');
+            handlerText.innerText = 'Handle by onclick function!!';
+        }
+        
+        const eventListener = document.querySelector('#event-listener');
+        eventListener.addEventListener('click', function(){
+            const handlerText = document.getElementById('handler-text');
+            handlerText.innerText = 'Text handle by addEventListener';
+        });
+
+        document.querySelector('#update-btn').addEventListener('click', function(){
+            // console.log('search btn');
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.value);
+            const inputText = document.querySelectorAll('#input-text');
+            // console.log(inputText);
+            inputText[0].innerText = inputField.value;
+            inputField.value = '';
+        });
+    </script>
+</body>
+</html>
