@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Github Delete)</title>
+</head>
+<body>
+    
+    <h1 id="secret-info">My secret info</h1>
+    <input type="text" id="input-field">
+    <!-- <button id="delete-btn">Delete</button> -->
+    <button id="delete-btn" disabled="">Delete</button>
+
+    <script src="js/event.js"></script>
+    <script>
+        // document.querySelector('#delete-btn').addEventListener('click', function(event){
+        //     // console.log('btn clicked');
+
+        //     let inputField = document.getElementById('input-field');
+        //     // console.log(inputField);
+
+        //     let inputValue = inputField.value;
+        //     // console.log(inputValue);
+
+        //     const secretInfo = document.querySelector('#secret-info');
+        //     // secretInfo.innerText = '';
+
+        //     if(inputValue === 'delete'){
+        //         secretInfo.innerText = '';
+        //     }
+        // });
+    </script>
+    <script>
+        document.querySelector('#input-field').addEventListener('keyup', function(event){
+            // let text = document.getElementById('input-field').value;
+            let text = event.target.value;
+
+            let deleteBtn = document.querySelector('#delete-btn');
+            
+            if(text == 'delete'){
+                deleteBtn.removeAttribute('disabled');
+            }else{
+                deleteBtn.setAttribute('disabled', true);
+            }
+        });
+        document.querySelector('#delete-btn').addEventListener('click', function(){
+            let secretInfo = document.getElementById('secret-info');
+            secretInfo.innerText = '';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (More Events)</title>
+</head>
+<body>
+    
+    <h1>More Events</h1>
+    <input type="text" id="text-field">
+    <button id="btn-more">Events</button>
+
+    <script src="js/event.js"></script>
+    <script>
+        // document.querySelector('#btn-more').addEventListener('click', function(){
+        // document.querySelector('#btn-more').addEventListener('mouseover', function(){
+        // document.querySelector('#btn-more').addEventListener('mousemove', function(){
+        // document.querySelector('#btn-more').addEventListener('mouseleave', function(){
+        document.querySelector('#btn-more').addEventListener('mouseenter', function(){
+            // console.log('Event Triggered');
+        });
+        document.getElementById('text-field').addEventListener('focus', function(){
+            // console.log('Event triggered inside input field!!');
+        });
+        document.getElementById('text-field').addEventListener('blur', function(){
+            // console.log('Event triggered outside input field!!');
+        });
+        document.getElementById('text-field').addEventListener('keydown', function(event){
+            // console.log(event);
+            // console.log(event.target);
+            // console.log(event.target.value);
+        });
+        document.getElementById('text-field').addEventListener('keypress', function(event){
+            // console.log(event.target.value);
+        });
+        document.getElementById('text-field').addEventListener('keyup', function(event){
+            // console.log(event.target.value);
+        });
+    </script>
+</body>
+</html>

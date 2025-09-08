@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Event - Bubble)</title>
+    <style>
+        *{
+            padding: 5px;
+        }
+        #item-3{
+            border: 2px solid gray;
+        }
+        .list-ul{
+            border: 2px solid yellow;
+        }
+        #list-container{
+            border: 2px solid blue;
+        }
+        body{
+            border: 2px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul class="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Enim, temporibus?</li>
+            <li id="item-3">Possimus, velit!</li>
+            <li id="item-4">Nisi, illo.</li>
+            <li id="item-5">Debitis, dolorem!</li>
+            <li id="item-6">Rem, reprehenderit.</li>
+        </ul>
+    </section>
+
+    <script src="js/event.js"></script>
+    <script>
+        document.querySelector('#item-3').addEventListener('click', function(event){
+            console.log('Item-3 clicked');
+            event.stopPropagation();
+            // event.stopImmediatePropagation();
+        });
+        document.querySelector('#item-3').addEventListener('click', function(event){
+            console.log('Item-3 second clicked');
+        });
+        document.querySelector('#item-3').addEventListener('click', function(event){
+            console.log('Item-3 third clicked');
+        });
+        document.querySelector('#item-3').addEventListener('click', function(event){
+            console.log('Item-3 fourth clicked');
+        });
+        document.querySelector('.list-ul').addEventListener('click', function(){
+            console.log('ul clicked');
+        });
+        document.querySelector('#list-container').addEventListener('click', function(){
+            console.log('section clicked');
+        });
+        document.querySelector('#body').addEventListener('click', function(){
+            console.log('body clicked');
+        });
+    </script>
+</body>
+</html>
