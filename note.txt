@@ -14,3 +14,4 @@
 ?? keydown, keypress
 ?? event (delegation)
 ?? function(event) = function er moddhe event ta kivabe kaj kore .. ki ki thake er moddhe
+?? window.location.href = 'home.html'; | ekhane (js) a (window) er kaj ki? | (window) vs (document)
