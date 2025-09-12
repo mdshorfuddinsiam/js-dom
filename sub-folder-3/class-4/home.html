@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .mockup-phone {
+        /* background-color: #ffffff; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="text-align: center;">Welcome to Home Page</h1> -->
+
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <!-- <div class="mockup-phone-display text-white grid place-content-center"> -->
+        <div class="mockup-phone-display grid place-content-center">
+            
+          <!-- Amount Section -->
+          <div class="flex justify-center">
+            <div class="stats bg-base-200 shadow">
+              <div class="stat">
+                  <div class="stat-value">89,400</div>
+                <div class="stat-desc">Available Balance</div>
+              </div>
+            </div>
+          </div>
+          <!-- End: Amount Section -->
+          <!-- <div class="divider divider-neutral"></div> -->
+          <div class="divider divider-warning"></div>
+          <!-- user action buttons -->
+          <div >
+            <button class="btn btn-lg">Add Money</button>
+            <button class="btn btn-lg">Cash Out</button>
+          </div>
+          <!-- End: user action buttons -->
+          <!-- <div class="divider divider-neutral"></div> -->
+          <div class="divider divider-warning"></div>
+          <!-- Add money form -->
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <!-- Login Form -->
+              <!-- <fieldset class="fieldset"> -->
+              <form class="fieldset">
+                <label class="label">Amount</label>
+                <input
+                  type="text"
+                  id="amount"
+                  class="input"
+                  placeholder="Enter Amount"
+                />
+                <label class="label">Pin</label>
+                <input
+                  type="password"
+                  id="pin"
+                  class="input"
+                  placeholder="Enter Pin"
+                  autocomplete="off"
+                />
+                <button id="add-money-btn" class="btn btn-neutral mt-4">
+                  Add Money
+                </button>
+              </form>
+              <!-- </fieldset> -->
+              <!-- End: Login Form -->
+            </div>
+          </div>
+          <!-- End: Add money form -->
+
+        </div>
+      </div>
+    </main>
+  
+    <script src="js/home.js"></script>
+  </body>
+</html>
