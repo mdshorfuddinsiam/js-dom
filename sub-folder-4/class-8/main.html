@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .mockup-phone{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main class="flex justify-center">
+      <div class="mockup-phone border-primary">
+        <div class="mockup-phone-camera"></div>
+        <div class="mockup-phone-display grid place-content-center">
+          <!-- <img
+            alt="wallpaper"
+            src="https://img.daisyui.com/images/stock/453966.webp"
+          /> -->
+
+          <div class="flex justify-center">
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="total-balance" class="stat-value">89400</div>
+                <div class="stat-desc">Total Balance</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- user action buttons -->
+          <div class="flex justify-center">
+            <button id="add-money-box" class="btn ">Add Money</button>
+            <button id="cash-out-box" class="btn ">Cash Out</button>
+            <button id="transaction-box" class="btn ">Transaction History</button>
+          </div>
+          <!-- End: user action buttons -->
+
+          <div class="divider"></div>
+
+          <!-- Add Money -->
+          <div id="add-money-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <form class="fieldset">
+                <label class="label">Select Bank</label>
+                <select name="" id="bank-name" class="select">
+                  <option>Select One</option>
+                  <option value="bkash">Bkash</option>
+                  <option value="nagad">Nagad</option>
+                  <option value="rocket">Rocket</option>
+                </select>
+                <label class="label">Account Number</label>
+                <input type="text" id="account-number" class="input" placeholder="Enter account number" />
+                <label class="label">Amount</label>
+                <input type="text" id="amount" class="input" placeholder="Enter your amount" />
+                <label class="label">4 Digit Pin</label>
+                <input
+                  type="password"
+                  id="pin-number"
+                  class="input"
+                  placeholder="Enter your Pin"
+                />
+                <button id="add-money-btn" class="btn btn-neutral mt-4">Add Money</button>
+              </form>
+            </div>
+          </div>
+          <!-- End: Add Money -->
+
+          <!-- Cash Out -->
+          <div id="cash-out-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <form class="fieldset">
+                <label class="label">Select Bank</label>
+                <select name="" id="cash-out-bank-name" class="select">
+                  <option>Select One</option>
+                  <option value="bkash">Bkash</option>
+                  <option value="nagad">Nagad</option>
+                  <option value="rocket">Rocket</option>
+                </select>
+                <label class="label">Account Number</label>
+                <input type="text" id="cash-out-account-number" class="input" placeholder="Enter account number" />
+                <label class="label">Amount</label>
+                <input type="text" id="cash-out-amount" class="input" placeholder="Enter your amount" />
+                <label class="label">4 Digit Pin</label>
+                <input
+                  type="password"
+                  id="cash-out-pin-number"
+                  class="input"
+                  placeholder="Enter your Pin"
+                />
+                <button id="cash-out-btn" class="btn btn-neutral mt-4">Cash Out</button>
+              </form>
+            </div>
+          </div>
+          <!-- End: Cash Out -->
+
+          <!-- Transaction History -->
+          <div id="trasaction-section">
+            <h1 class="text-3xl font-bold text-blue-400 text-center">Transaction History</h1>
+          </div>
+          <!-- End: Transaction History -->
+
+        </div>
+      </div>
+    </main>
+
+    <script src="utilities/toggle.js"></script>
+    <script src="utilities/ultilities.js"></script>
+    <script src="js/add_money.js"></script>
+    <script src="js/cash_out.js"></script>
+    <script src="js/transaction_history.js"></script>
+  </body>
+</html>
